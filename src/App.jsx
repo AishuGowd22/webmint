@@ -108,7 +108,8 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const phoneNumber = "9036137161";
-  const whatsappNumber = "9036137161";
+  const whatsappNumber = "919036137161";
+  const emailAddress = "webmint1208@gmail.com";
 
   const openWhatsApp = () => {
     const message =
@@ -125,6 +126,10 @@ function App() {
     window.location.href = `tel:+91${phoneNumber}`;
   };
 
+  const openEmail = () => {
+    window.location.href = `mailto:${emailAddress}`;
+  };
+
   const scrollToSection = (id) => {
     setMenuOpen(false);
 
@@ -132,6 +137,7 @@ function App() {
       behavior: "smooth",
     });
   };
+
 
   return (
     <div className="site">
@@ -528,36 +534,49 @@ function App() {
           </div>
 
           <div className="contact-details">
-            <div>
-              <span>PHONE</span>
 
-              <button
-                type="button"
-                onClick={callNumber}
-              >
-                +91 {phoneNumber}
-              </button>
-            </div>
+  <div>
+    <span>PHONE</span>
 
-            <div>
-              <span>WHATSAPP</span>
+    <button
+      type="button"
+      onClick={callNumber}
+    >
+      +91 {phoneNumber}
+    </button>
+  </div>
 
-              <button
-                type="button"
-                onClick={openWhatsApp}
-              >
-                CHAT WITH US ↗
-              </button>
-            </div>
+  <div>
+    <span>WHATSAPP</span>
 
-            <div>
-              <span>LOCATION</span>
+    <button
+      type="button"
+      onClick={openWhatsApp}
+    >
+      CHAT WITH US ↗
+    </button>
+  </div>
 
-              <strong>
-                BANGALORE, INDIA
-              </strong>
-            </div>
-          </div>
+  <div>
+    <span>EMAIL</span>
+
+    <button
+      type="button"
+      onClick={openEmail}
+    >
+      {emailAddress} ↗
+    </button>
+  </div>
+
+  <div>
+    <span>LOCATION</span>
+
+    <strong>
+      BANGALORE, INDIA
+    </strong>
+  </div>
+
+</div>
         </section>
       </main>
 
