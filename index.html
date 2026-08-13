@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- Mobile / Responsive -->
+    <!-- =========================
+         MOBILE / RESPONSIVE
+    ========================== -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
@@ -45,34 +47,43 @@
     />
 
     <!-- =========================
-         FAVICON
+         FAVICON / WEBMINT LOGO
     ========================== -->
 
     <link
       rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
+      type="image/png"
+      href="/webmint-logo.png"
     />
 
     <link
       rel="apple-touch-icon"
-      href="/favicon.svg"
+      href="/webmint-logo.png"
     />
 
     <!-- =========================
          THEME
     ========================== -->
 
-    <meta name="theme-color" content="#111111" />
+    <meta
+      name="theme-color"
+      content="#111111"
+    />
 
-    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="color-scheme"
+      content="light dark"
+    />
 
     <!-- =========================
          OPEN GRAPH
          WhatsApp / Facebook / LinkedIn
     ========================== -->
 
-    <meta property="og:type" content="website" />
+    <meta
+      property="og:type"
+      content="website"
+    />
 
     <meta
       property="og:title"
@@ -98,12 +109,6 @@
       property="og:locale"
       content="en_IN"
     />
-
-    <!--
-      IMPORTANT:
-      Create /public/og-image.jpg later.
-      Recommended size: 1200 × 630 px.
-    -->
 
     <meta
       property="og:image"
@@ -164,8 +169,7 @@
     />
 
     <!-- =========================
-         STRUCTURED DATA
-         WebSite
+         WEBSITE STRUCTURED DATA
     ========================== -->
 
     <script type="application/ld+json">
@@ -196,7 +200,7 @@
         "url": "https://www.webmintweb.com/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.webmintweb.com/favicon.svg"
+          "url": "https://www.webmintweb.com/webmint-logo.png"
         },
         "email": "webmint1208@gmail.com",
         "telephone": "+91-9036137161",
@@ -204,18 +208,13 @@
         "areaServed": {
           "@type": "City",
           "name": "Bangalore"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "addressCountry": "IN"
         }
       }
     </script>
 
     <!-- =========================
-         LOCAL BUSINESS STRUCTURED DATA
+         PROFESSIONAL SERVICE
+         STRUCTURED DATA
     ========================== -->
 
     <script type="application/ld+json">
@@ -227,14 +226,7 @@
         "url": "https://www.webmintweb.com/",
         "telephone": "+91-9036137161",
         "email": "webmint1208@gmail.com",
-        "priceRange": "$$",
-        "description": "Website builder and web development service in Bangalore providing professional business websites, landing pages, responsive websites and website redesign.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "addressCountry": "IN"
-        },
+        "description": "Webmint provides professional website design and web development services in Bangalore, including business websites, landing pages, responsive websites and website redesign.",
         "areaServed": [
           {
             "@type": "City",
@@ -298,7 +290,11 @@
          PRECONNECT
     ========================== -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -307,7 +303,6 @@
 
     <!-- =========================
          GOOGLE FONT
-         Only keep if your CSS uses it.
     ========================== -->
 
     <link
@@ -317,14 +312,29 @@
   </head>
 
   <body>
+    <!-- =========================
+         NOSCRIPT
+    ========================== -->
+
     <noscript>
       Webmint is a professional website development company in Bangalore
       creating modern business websites, landing pages and responsive
       digital experiences.
     </noscript>
 
+    <!-- =========================
+         REACT ROOT
+    ========================== -->
+
     <div id="root"></div>
 
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- =========================
+         REACT ENTRY
+    ========================== -->
+
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
   </body>
 </html>
