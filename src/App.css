@@ -1663,3 +1663,229 @@ a {
   }
 
 }
+
+/* =========================================
+   SEO SERVICE PAGES
+========================================= */
+
+.seo-page {
+  min-height: 100vh;
+  background: #f5f3ee;
+  color: #111;
+}
+
+.seo-page-nav {
+  width: 100%;
+  padding: 28px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.seo-logo {
+  color: #111;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.seo-logo span {
+  font-size: 10px;
+  vertical-align: top;
+  margin-left: 3px;
+}
+
+.seo-nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease;
+}
+
+.seo-nav-button:hover {
+  transform: translateY(-2px);
+}
+
+.seo-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 5vw 100px;
+}
+
+.seo-label {
+  display: block;
+  margin-bottom: 35px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.seo-hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(48px, 8vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+}
+
+.seo-hero h1 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.seo-hero p {
+  max-width: 600px;
+  margin: 45px 0 35px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.seo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 25px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: transform 0.2s ease;
+}
+
+.seo-cta:hover {
+  transform: translateY(-2px);
+}
+
+.seo-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 5vw 120px;
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.seo-content h2 {
+  margin: 0 0 25px;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.seo-content h2:not(:first-child) {
+  margin-top: 90px;
+}
+
+.seo-content p {
+  max-width: 800px;
+  margin: 0 0 25px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.seo-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 35px;
+  border-top: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.seo-list div {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.seo-list div:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.seo-text-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+}
+
+.seo-footer {
+  padding: 30px 5vw;
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  font-size: 12px;
+  color: #666;
+}
+
+/* =========================================
+   SEO PAGE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .seo-page-nav {
+    padding: 22px 6vw;
+  }
+
+  .seo-logo {
+    font-size: 21px;
+  }
+
+  .seo-nav-button {
+    padding: 10px 14px;
+    font-size: 10px;
+  }
+
+  .seo-hero {
+    padding: 75px 6vw 70px;
+  }
+
+  .seo-label {
+    margin-bottom: 25px;
+    font-size: 10px;
+  }
+
+  .seo-hero h1 {
+    font-size: clamp(45px, 14vw, 75px);
+  }
+
+  .seo-hero p {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  .seo-content {
+    padding: 65px 6vw 80px;
+  }
+
+  .seo-content h2 {
+    font-size: 34px;
+  }
+
+  .seo-content p {
+    font-size: 16px;
+  }
+
+  .seo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-list div:nth-child(odd) {
+    margin-right: 0;
+  }
+}
