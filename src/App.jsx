@@ -138,38 +138,33 @@ function App() {
     });
   };
 
-
   return (
     <div className="site">
-
-      {/* =========================
-          NAVIGATION
-      ========================== */}
+      {/* NAVIGATION */}
 
       <header className="navbar">
         <button
           className="logo"
           onClick={() => scrollToSection("home")}
+          aria-label="Go to homepage"
         >
-          WEBMINT<span>®</span>
+          <img
+            src="/webmint-logo.png"
+            alt="Webmint"
+            className="navbar-logo"
+          />
         </button>
 
         <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
-          <button onClick={() => scrollToSection("home")}>
-            Home
-          </button>
+          <button onClick={() => scrollToSection("home")}>Home</button>
 
-          <button onClick={() => scrollToSection("work")}>
-            Work
-          </button>
+          <button onClick={() => scrollToSection("work")}>Work</button>
 
           <button onClick={() => scrollToSection("services")}>
             Services
           </button>
 
-          <button onClick={() => scrollToSection("about")}>
-            About
-          </button>
+          <button onClick={() => scrollToSection("about")}>About</button>
 
           <button
             className="nav-contact"
@@ -183,16 +178,14 @@ function App() {
           className="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Open menu"
+          aria-expanded={menuOpen}
         >
           {menuOpen ? "×" : "☰"}
         </button>
       </header>
 
       <main>
-
-        {/* =========================
-            HERO
-        ========================== */}
+        {/* HERO */}
 
         <section id="home" className="hero">
           <div className="hero-small">
@@ -211,9 +204,8 @@ function App() {
 
             <div className="hero-right">
               <p>
-                Webmint creates modern websites for businesses
-                that want to look professional, build trust and
-                grow online.
+                Webmint creates modern websites for businesses that want to
+                look professional, build trust and grow online.
               </p>
 
               <button
@@ -244,9 +236,7 @@ function App() {
           </div>
         </section>
 
-        {/* =========================
-            INTRO
-        ========================== */}
+        {/* INTRO */}
 
         <section className="intro">
           <div className="section-label">
@@ -264,17 +254,14 @@ function App() {
             </h2>
 
             <p>
-              Your website is often the first interaction a customer
-              has with your business. We create digital experiences
-              that communicate your value clearly and turn visitors
-              into customers.
+              Your website is often the first interaction a customer has with
+              your business. We create digital experiences that communicate
+              your value clearly and turn visitors into customers.
             </p>
           </div>
         </section>
 
-        {/* =========================
-            WORK / PROJECTS
-        ========================== */}
+        {/* WORK */}
 
         <section id="work" className="work-section">
           <div className="section-heading">
@@ -284,20 +271,15 @@ function App() {
             </div>
 
             <p>
-              A selection of websites we have designed
-              and developed for different businesses.
+              A selection of websites we have designed and developed for
+              different businesses.
             </p>
           </div>
 
           <div className="projects-grid">
             {projects.map((project) => (
-              <article
-                className="project-card"
-                key={project.number}
-              >
-                <div className="project-number">
-                  {project.number}
-                </div>
+              <article className="project-card" key={project.number}>
+                <div className="project-number">{project.number}</div>
 
                 <div className="project-middle">
                   <span className="project-category">
@@ -326,9 +308,7 @@ function App() {
           </div>
         </section>
 
-        {/* =========================
-            SERVICES
-        ========================== */}
+        {/* SERVICES */}
 
         <section id="services" className="services-section">
           <div className="section-heading">
@@ -338,8 +318,8 @@ function App() {
             </div>
 
             <p>
-              Digital experiences designed to help businesses
-              look professional, build trust and grow online.
+              Digital experiences designed to help businesses look
+              professional, build trust and grow online.
             </p>
           </div>
 
@@ -356,9 +336,7 @@ function App() {
                 <div className="service-top">
                   <span>{service.number}</span>
 
-                  <div className="service-icon">
-                    {service.icon}
-                  </div>
+                  <div className="service-icon">{service.icon}</div>
                 </div>
 
                 <div className="service-content">
@@ -370,18 +348,14 @@ function App() {
                 <div className="service-bottom">
                   <span>{service.shortTitle}</span>
 
-                  <span className="service-arrow">
-                    ↗
-                  </span>
+                  <span className="service-arrow">↗</span>
                 </div>
               </button>
             ))}
           </div>
         </section>
 
-        {/* =========================
-            ABOUT
-        ========================== */}
+        {/* ABOUT */}
 
         <section id="about" className="about-section">
           <div className="section-label">
@@ -400,22 +374,19 @@ function App() {
 
             <div className="about-text">
               <p className="about-large">
-                Webmint is a web development studio focused on
-                creating professional digital experiences for
-                businesses and brands.
+                Webmint is a web development studio focused on creating
+                professional digital experiences for businesses and brands.
               </p>
 
               <p>
-                From simple business websites to custom landing
-                pages and complete digital experiences, we focus
-                on clean design, responsive development and
-                practical business results.
+                From simple business websites to custom landing pages and
+                complete digital experiences, we focus on clean design,
+                responsive development and practical business results.
               </p>
 
               <p>
-                Every project is built with the goal of making
-                your business look credible, modern and ready
-                for the digital world.
+                Every project is built with the goal of making your business
+                look credible, modern and ready for the digital world.
               </p>
 
               <button
@@ -429,9 +400,7 @@ function App() {
           </div>
         </section>
 
-        {/* =========================
-            PROCESS
-        ========================== */}
+        {/* PROCESS */}
 
         <section className="process-section">
           <div className="section-heading">
@@ -441,8 +410,7 @@ function App() {
             </div>
 
             <p>
-              Simple, transparent and focused on getting
-              your website live.
+              Simple, transparent and focused on getting your website live.
             </p>
           </div>
 
@@ -451,8 +419,8 @@ function App() {
               <span>01</span>
               <h3>DISCOVER</h3>
               <p>
-                We understand your business, customers,
-                goals and website requirements.
+                We understand your business, customers, goals and website
+                requirements.
               </p>
             </div>
 
@@ -460,8 +428,7 @@ function App() {
               <span>02</span>
               <h3>DESIGN</h3>
               <p>
-                We create a modern visual direction
-                that fits your brand.
+                We create a modern visual direction that fits your brand.
               </p>
             </div>
 
@@ -469,8 +436,8 @@ function App() {
               <span>03</span>
               <h3>DEVELOP</h3>
               <p>
-                We turn the approved design into a
-                responsive working website.
+                We turn the approved design into a responsive working
+                website.
               </p>
             </div>
 
@@ -478,26 +445,19 @@ function App() {
               <span>04</span>
               <h3>LAUNCH</h3>
               <p>
-                Your website goes live and becomes
-                ready for your customers.
+                Your website goes live and becomes ready for your customers.
               </p>
             </div>
           </div>
         </section>
 
-        {/* =========================
-            CONTACT
-        ========================== */}
+        {/* CONTACT */}
 
         <section id="contact" className="contact-section">
           <div className="contact-top">
-            <span className="section-number">
-              07
-            </span>
+            <span className="section-number">07</span>
 
-            <span>
-              START A PROJECT
-            </span>
+            <span>START A PROJECT</span>
           </div>
 
           <div className="contact-content">
@@ -508,9 +468,8 @@ function App() {
             </h2>
 
             <p>
-              Tell us what you need. Let's create
-              something that makes your business
-              stand out online.
+              Tell us what you need. Let's create something that makes your
+              business stand out online.
             </p>
           </div>
 
@@ -534,59 +493,48 @@ function App() {
           </div>
 
           <div className="contact-details">
+            <div>
+              <span>PHONE</span>
 
-  <div>
-    <span>PHONE</span>
+              <button type="button" onClick={callNumber}>
+                +91 {phoneNumber}
+              </button>
+            </div>
 
-    <button
-      type="button"
-      onClick={callNumber}
-    >
-      +91 {phoneNumber}
-    </button>
-  </div>
+            <div>
+              <span>WHATSAPP</span>
 
-  <div>
-    <span>WHATSAPP</span>
+              <button type="button" onClick={openWhatsApp}>
+                CHAT WITH US ↗
+              </button>
+            </div>
 
-    <button
-      type="button"
-      onClick={openWhatsApp}
-    >
-      CHAT WITH US ↗
-    </button>
-  </div>
+            <div>
+              <span>EMAIL</span>
 
-  <div>
-    <span>EMAIL</span>
+              <button type="button" onClick={openEmail}>
+                {emailAddress} ↗
+              </button>
+            </div>
 
-    <button
-      type="button"
-      onClick={openEmail}
-    >
-      {emailAddress} ↗
-    </button>
-  </div>
+            <div>
+              <span>LOCATION</span>
 
-  <div>
-    <span>LOCATION</span>
-
-    <strong>
-      BANGALORE, INDIA
-    </strong>
-  </div>
-
-</div>
+              <strong>BANGALORE, INDIA</strong>
+            </div>
+          </div>
         </section>
       </main>
 
-      {/* =========================
-          FOOTER
-      ========================== */}
+      {/* FOOTER */}
 
       <footer className="footer">
         <div className="footer-logo">
-          WEBMINT<span>®</span>
+          <img
+            src="/webmint-logo.png"
+            alt="Webmint"
+            className="footer-logo-image"
+          />
         </div>
 
         <div className="footer-middle">
@@ -598,9 +546,7 @@ function App() {
         </div>
       </footer>
 
-      {/* =========================
-          SERVICE MODAL
-      ========================== */}
+      {/* SERVICE MODAL */}
 
       {selectedService && (
         <div
@@ -624,13 +570,9 @@ function App() {
               {selectedService.number} / SERVICE
             </span>
 
-            <h2>
-              {selectedService.title}
-            </h2>
+            <h2>{selectedService.title}</h2>
 
-            <p>
-              {selectedService.description}
-            </p>
+            <p>{selectedService.description}</p>
 
             <div className="modal-list">
               {selectedService.details.map((detail) => (

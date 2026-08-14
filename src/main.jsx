@@ -14,10 +14,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* Main Website */}
         <Route path="/" element={<App />} />
 
-        {/* SEO Service Pages */}
         <Route
           path="/website-development"
           element={<WebsiteDevelopment />}
