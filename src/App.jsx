@@ -111,8 +111,8 @@ function App() {
   // CONTACT DETAILS
   // =========================================
 
-  const phoneNumber = "8660673250";
-  const whatsappNumber = "918660673250";
+  const phoneNumber = "9036137161";
+  const whatsappNumber = "919036137161";
   const emailAddress = "webmint1208@gmail.com";
 
   // =========================================
@@ -123,9 +123,8 @@ function App() {
     const message =
       "Hello Webmint! I am interested in getting a website for my business.";
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      message
-    )}`;
+    const whatsappUrl =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
@@ -147,7 +146,7 @@ function App() {
   };
 
   // =========================================
-  // SCROLL TO SECTION
+  // SCROLL
   // =========================================
 
   const scrollToSection = (id) => {
@@ -175,7 +174,7 @@ function App() {
     <div className="site">
       {/* =========================================
           NAVIGATION
-      ========================================= */}
+      ========================================== */}
 
       <header className="navbar">
         <button
@@ -231,7 +230,7 @@ function App() {
       <main>
         {/* =========================================
             HERO
-        ========================================= */}
+        ========================================== */}
 
         <section id="home" className="hero">
           <div className="hero-small">
@@ -285,7 +284,7 @@ function App() {
 
         {/* =========================================
             INTRO
-        ========================================= */}
+        ========================================== */}
 
         <section className="intro">
           <div className="section-label">
@@ -312,7 +311,7 @@ function App() {
 
         {/* =========================================
             WORK
-        ========================================= */}
+        ========================================== */}
 
         <section id="work" className="work-section">
           <div className="section-heading">
@@ -361,7 +360,7 @@ function App() {
 
         {/* =========================================
             SERVICES
-        ========================================= */}
+        ========================================== */}
 
         <section id="services" className="services-section">
           <div className="section-heading">
@@ -410,7 +409,7 @@ function App() {
 
         {/* =========================================
             ABOUT
-        ========================================= */}
+        ========================================== */}
 
         <section id="about" className="about-section">
           <div className="section-label">
@@ -457,7 +456,7 @@ function App() {
 
         {/* =========================================
             PROCESS
-        ========================================= */}
+        ========================================== */}
 
         <section className="process-section">
           <div className="section-heading">
@@ -493,8 +492,7 @@ function App() {
               <span>03</span>
               <h3>DEVELOP</h3>
               <p>
-                We turn the approved design into a responsive working
-                website.
+                We turn the approved design into a responsive working website.
               </p>
             </div>
 
@@ -510,7 +508,7 @@ function App() {
 
         {/* =========================================
             CONTACT
-        ========================================= */}
+        ========================================== */}
 
         <section id="contact" className="contact-section">
           <div className="contact-top">
@@ -586,7 +584,7 @@ function App() {
 
       {/* =========================================
           FOOTER
-      ========================================= */}
+      ========================================== */}
 
       <footer className="footer">
         <div className="footer-logo">
@@ -608,13 +606,10 @@ function App() {
 
       {/* =========================================
           SERVICE MODAL
-      ========================================= */}
+      ========================================== */}
 
       {selectedService && (
-        <div
-          className="service-modal-overlay"
-          onClick={closeService}
-        >
+        <div className="service-modal-overlay" onClick={closeService}>
           <div
             className="service-modal"
             onClick={(event) => event.stopPropagation()}
