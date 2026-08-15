@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../App.css";
 
 function WebsiteDevelopment() {
   return (
@@ -45,9 +46,9 @@ function WebsiteDevelopment() {
           </p>
 
           <p>
-            We build responsive websites that work across desktop,
-            tablet and mobile devices. Every website is structured around
-            your business goals, services and customers.
+            We build responsive websites that work across desktop, tablet
+            and mobile devices. Every website is structured around your
+            business goals, services and customers.
           </p>
 
           <h2>What We Build</h2>
@@ -66,11 +67,10 @@ function WebsiteDevelopment() {
           <h2>Why Choose Webmint?</h2>
 
           <p>
-            We focus on clean design, responsive development, clear
-            content structure and practical business requirements.
-            Our goal is to create websites that look professional while
-            making it easy for customers to understand your business
-            and contact you.
+            We focus on clean design, responsive development, clear content
+            structure and practical business requirements. Our goal is to
+            create websites that look professional while making it easy for
+            customers to understand your business and contact you.
           </p>
 
           <Link to="/#contact" className="seo-text-link">
@@ -80,8 +80,8 @@ function WebsiteDevelopment() {
       </main>
 
       <footer className="seo-footer">
-        © {new Date().getFullYear()} Webmint — Website Development
-        Company in Bangalore.
+        © {new Date().getFullYear()} Webmint — Website Development Company
+        in Bangalore.
       </footer>
     </div>
   );

@@ -10,32 +10,38 @@ import BusinessWebsites from "./pages/BusinessWebsites.jsx";
 import LandingPages from "./pages/LandingPages.jsx";
 import WebsiteRedesign from "./pages/WebsiteRedesign.jsx";
 
+const router = (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+
+      <Route
+        path="/website-development"
+        element={<WebsiteDevelopment />}
+      />
+
+      <Route
+        path="/business-websites"
+        element={<BusinessWebsites />}
+      />
+
+      <Route
+        path="/landing-pages"
+        element={<LandingPages />}
+      />
+
+      <Route
+        path="/website-redesign"
+        element={<WebsiteRedesign />}
+      />
+
+      <Route path="*" element={<App />} />
+    </Routes>
+  </BrowserRouter>
+);
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-
-        <Route
-          path="/website-development"
-          element={<WebsiteDevelopment />}
-        />
-
-        <Route
-          path="/business-websites"
-          element={<BusinessWebsites />}
-        />
-
-        <Route
-          path="/landing-pages"
-          element={<LandingPages />}
-        />
-
-        <Route
-          path="/website-redesign"
-          element={<WebsiteRedesign />}
-        />
-      </Routes>
-    </BrowserRouter>
+    {router}
   </StrictMode>
 );

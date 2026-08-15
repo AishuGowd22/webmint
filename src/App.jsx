@@ -107,9 +107,17 @@ function App() {
   const [selectedService, setSelectedService] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const phoneNumber = "9036137161";
-  const whatsappNumber = "919036137161";
+  // =========================================
+  // CONTACT DETAILS
+  // =========================================
+
+  const phoneNumber = "8660673250";
+  const whatsappNumber = "918660673250";
   const emailAddress = "webmint1208@gmail.com";
+
+  // =========================================
+  // WHATSAPP
+  // =========================================
 
   const openWhatsApp = () => {
     const message =
@@ -122,28 +130,56 @@ function App() {
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
+  // =========================================
+  // PHONE
+  // =========================================
+
   const callNumber = () => {
     window.location.href = `tel:+91${phoneNumber}`;
   };
+
+  // =========================================
+  // EMAIL
+  // =========================================
 
   const openEmail = () => {
     window.location.href = `mailto:${emailAddress}`;
   };
 
+  // =========================================
+  // SCROLL TO SECTION
+  // =========================================
+
   const scrollToSection = (id) => {
     setMenuOpen(false);
 
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  // =========================================
+  // CLOSE SERVICE MODAL
+  // =========================================
+
+  const closeService = () => {
+    setSelectedService(null);
   };
 
   return (
     <div className="site">
-      {/* NAVIGATION */}
+      {/* =========================================
+          NAVIGATION
+      ========================================= */}
 
       <header className="navbar">
         <button
+          type="button"
           className="logo"
           onClick={() => scrollToSection("home")}
           aria-label="Go to homepage"
@@ -156,17 +192,24 @@ function App() {
         </button>
 
         <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
-          <button onClick={() => scrollToSection("home")}>Home</button>
+          <button type="button" onClick={() => scrollToSection("home")}>
+            Home
+          </button>
 
-          <button onClick={() => scrollToSection("work")}>Work</button>
+          <button type="button" onClick={() => scrollToSection("work")}>
+            Work
+          </button>
 
-          <button onClick={() => scrollToSection("services")}>
+          <button type="button" onClick={() => scrollToSection("services")}>
             Services
           </button>
 
-          <button onClick={() => scrollToSection("about")}>About</button>
+          <button type="button" onClick={() => scrollToSection("about")}>
+            About
+          </button>
 
           <button
+            type="button"
             className="nav-contact"
             onClick={() => scrollToSection("contact")}
           >
@@ -175,9 +218,10 @@ function App() {
         </nav>
 
         <button
+          type="button"
           className="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Open menu"
+          aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
           {menuOpen ? "×" : "☰"}
@@ -185,7 +229,9 @@ function App() {
       </header>
 
       <main>
-        {/* HERO */}
+        {/* =========================================
+            HERO
+        ========================================= */}
 
         <section id="home" className="hero">
           <div className="hero-small">
@@ -209,6 +255,7 @@ function App() {
               </p>
 
               <button
+                type="button"
                 className="primary-button"
                 onClick={() => scrollToSection("work")}
               >
@@ -236,7 +283,9 @@ function App() {
           </div>
         </section>
 
-        {/* INTRO */}
+        {/* =========================================
+            INTRO
+        ========================================= */}
 
         <section className="intro">
           <div className="section-label">
@@ -261,7 +310,9 @@ function App() {
           </div>
         </section>
 
-        {/* WORK */}
+        {/* =========================================
+            WORK
+        ========================================= */}
 
         <section id="work" className="work-section">
           <div className="section-heading">
@@ -308,7 +359,9 @@ function App() {
           </div>
         </section>
 
-        {/* SERVICES */}
+        {/* =========================================
+            SERVICES
+        ========================================= */}
 
         <section id="services" className="services-section">
           <div className="section-heading">
@@ -355,7 +408,9 @@ function App() {
           </div>
         </section>
 
-        {/* ABOUT */}
+        {/* =========================================
+            ABOUT
+        ========================================= */}
 
         <section id="about" className="about-section">
           <div className="section-label">
@@ -400,7 +455,9 @@ function App() {
           </div>
         </section>
 
-        {/* PROCESS */}
+        {/* =========================================
+            PROCESS
+        ========================================= */}
 
         <section className="process-section">
           <div className="section-heading">
@@ -451,12 +508,13 @@ function App() {
           </div>
         </section>
 
-        {/* CONTACT */}
+        {/* =========================================
+            CONTACT
+        ========================================= */}
 
         <section id="contact" className="contact-section">
           <div className="contact-top">
             <span className="section-number">07</span>
-
             <span>START A PROJECT</span>
           </div>
 
@@ -526,7 +584,9 @@ function App() {
         </section>
       </main>
 
-      {/* FOOTER */}
+      {/* =========================================
+          FOOTER
+      ========================================= */}
 
       <footer className="footer">
         <div className="footer-logo">
@@ -546,12 +606,14 @@ function App() {
         </div>
       </footer>
 
-      {/* SERVICE MODAL */}
+      {/* =========================================
+          SERVICE MODAL
+      ========================================= */}
 
       {selectedService && (
         <div
           className="service-modal-overlay"
-          onClick={() => setSelectedService(null)}
+          onClick={closeService}
         >
           <div
             className="service-modal"
@@ -560,7 +622,7 @@ function App() {
             <button
               type="button"
               className="modal-close"
-              onClick={() => setSelectedService(null)}
+              onClick={closeService}
               aria-label="Close service details"
             >
               ×
@@ -594,6 +656,7 @@ function App() {
                     .getElementById("contact")
                     ?.scrollIntoView({
                       behavior: "smooth",
+                      block: "start",
                     });
                 }, 100);
               }}
