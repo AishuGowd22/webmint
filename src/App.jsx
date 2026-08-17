@@ -119,15 +119,16 @@ function App() {
   // WHATSAPP
   // =========================================
 
-  const openWhatsApp = () => {
-    const message =
-      "Hello Webmint! I am interested in getting a website for my business.";
+const openWhatsApp = () => {
+  const message =
+    "Hello Webmint! I am interested in getting a website for my business.";
 
-    const whatsappUrl =
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
 
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-  };
+  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+};
 
   // =========================================
   // PHONE
@@ -141,9 +142,31 @@ function App() {
   // EMAIL
   // =========================================
 
-  const openEmail = () => {
-    window.location.href = `mailto:${emailAddress}`;
-  };
+ const openEmail = () => {
+  const subject = "Website Development Inquiry - Webmint";
+
+  const body = `Hello Webmint,
+
+I am interested in getting a website for my business.
+
+Here are my requirements:
+
+Business Name:
+Website Type:
+Services Required:
+Budget:
+Preferred Timeline:
+
+Please contact me to discuss the project.
+
+Thank you.`;
+
+  const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoUrl;
+};
 
   // =========================================
   // SCROLL
@@ -405,6 +428,24 @@ function App() {
               </button>
             ))}
           </div>
+
+          <div className="seo-service-links">
+  <a href="/website-development">
+    Website Development in Bangalore ↗
+  </a>
+
+  <a href="/business-websites">
+    Business Website Development in Bangalore ↗
+  </a>
+
+  <a href="/landing-pages">
+    Landing Page Design in Bangalore ↗
+  </a>
+
+  <a href="/website-redesign">
+    Website Redesign in Bangalore ↗
+  </a>
+</div>
         </section>
 
         {/* =========================================

@@ -1129,3 +1129,35 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.seo-service-links {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.seo-service-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border: 1px solid rgba(17, 17, 17, 0.15);
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.seo-service-links a:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .seo-service-links {
+    grid-template-columns: 1fr;
+  }
+}
