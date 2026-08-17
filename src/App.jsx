@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 const projects = [
@@ -104,8 +105,44 @@ const services = [
 ];
 
 function App() {
+  useEffect(() => {
+    document.title =
+      "Webmint | Website Development Company in Bangalore";
+
+    const description =
+      "Webmint is a website development company in Bangalore creating modern business websites, landing pages and professional digital experiences.";
+
+    let metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+
+    metaDescription.setAttribute("content", description);
+
+    let canonical = document.querySelector(
+      'link[rel="canonical"]'
+    );
+
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute(
+      "href",
+      "https://www.webmintweb.com/"
+    );
+  }, []);
+
   const [selectedService, setSelectedService] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+
 
   // =========================================
   // CONTACT DETAILS
@@ -262,20 +299,20 @@ Thank you.`;
           </div>
 
           <div className="hero-content">
-            <h1>
-              WE BUILD
-              <br />
-              <span>DIGITAL</span>
-              <br />
-              PRESENCE.
-            </h1>
+           <h1>
+  WE BUILD
+  <br />
+  <span>WEBSITES</span>
+  <br />
+  THAT GROW.
+</h1>
 
             <div className="hero-right">
               <p>
-                Webmint creates modern websites for businesses that want to
-                look professional, build trust and grow online.
-              </p>
-
+  Webmint is a website development company in Bangalore creating
+  modern, professional websites for businesses, startups and
+  brands that want to build a stronger online presence.
+</p>
               <button
                 type="button"
                 className="primary-button"
@@ -546,6 +583,48 @@ Thank you.`;
             </div>
           </div>
         </section>
+
+        {/* =========================================
+    WEBSITE SERVICES / SEO
+========================================== */}
+
+<section className="homepage-seo-services">
+  <div className="section-label">
+    <span>08</span>
+    <span>WEBSITE SERVICES</span>
+  </div>
+
+  <div className="homepage-seo-content">
+    <h2>
+      Website Development
+      <br />
+      Services in <em>Bangalore.</em>
+    </h2>
+
+    <p>
+      Webmint provides professional website development services
+      for businesses, startups and brands in Bangalore and beyond.
+    </p>
+
+    <div className="seo-service-links">
+      <Link to="/website-development">
+        Website Development in Bangalore ↗
+      </Link>
+
+      <Link to="/business-website-development">
+        Business Website Development in Bangalore ↗
+      </Link>
+
+      <Link to="/landing-page-design">
+        Landing Page Design in Bangalore ↗
+      </Link>
+
+      <Link to="/website-redesign">
+        Website Redesign in Bangalore ↗
+      </Link>
+    </div>
+  </div>
+</section>
 
         {/* =========================================
             CONTACT
